@@ -3,7 +3,7 @@ export default function showError(message) {
   const alertDiv = document.createElement("div");
   alertDiv.classList.add(
     "alert",
-    "alert-warning",
+    "alert-secondary",
     "alert-dismissible",
     "fade",
     "show"

@@ -22,7 +22,7 @@ export default function printApp(){
     
     <h1 id="w-location"></h1>
 
-
+    <h2 id= "country" class="country"><h2>
 <h2 class="temperature" id="w-temperature"> </h2>
 
 

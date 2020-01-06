@@ -13,6 +13,7 @@ export default function printWeather(location = "Dakar", unit = "celcius") {
 
   weatherData
     .then(result => {
+      console.log(result)
       ui.paint(result, unit);
     })
     .catch(() => {

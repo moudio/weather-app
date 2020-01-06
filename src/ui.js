@@ -1,6 +1,7 @@
 export default class UI {
     constructor() {
         this.location = document.getElementById('w-location');
+        this.country = document.getElementById('country');
         this.temperature = document.getElementById('w-temperature');
         this.description = document.getElementById('w-description');
         this.icon = document.getElementById('w-icon');
@@ -18,6 +19,7 @@ paint(data, unit) {
         temperature_unit = '°F'; 
         wind_speed_unit = 'miles/hour'
     }
+    this.country.textContent = data.sys.country;
     this.location.textContent =  data.name;
     this.temperature.textContent = `${Math.round(data.main.temp)} ${temperature_unit}`;
     this.description.textContent = data.weather[0].description;
