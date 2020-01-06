@@ -1,18 +1,19 @@
+import addModalEvent from './add_modal_event'
 export default function printApp(){
     const body = document.querySelector('body')
     const container = document.createElement('div'); 
     container.classList.add('container');
     container.innerHTML = `
     <div class="row">
-    <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+    <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded app">
     
     
     <div class="btn-group btn-group-toggle radios" data-toggle="buttons">
   <label class="btn btn-primary active temp-unit">
-    <input type="radio" name="unit" id="cel" autocomplete="off" value="celcius"> Celicus(°C)
+    <input type="radio" name="unit" id="cel" autocomplete="off" value="celcius" checked> Celicus(°C)
   </label>
   <label class="btn btn-primary temp-unit">
-    <input type="radio" name="unit" id="fah" autocomplete="off" value="fahrenheit" checked> Fahrenheit(°F)
+    <input type="radio" name="unit" id="fah" autocomplete="off" value="fahrenheit"> Fahrenheit(°F)
   </label>
  
 
@@ -36,7 +37,7 @@ export default function printApp(){
             </ul>
             <hr>
             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal" id="change-location-trigger" >
 Change Location
 </button>
 
@@ -59,20 +60,22 @@ Change Location
             <form id="w-form">
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input type="text" id="city" class="form-control">
+                    <input type="text" id="city" class="form-control" required>
                 </div>
               
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button  id= "w-change-btn" type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
+          <button  id= "w-change-btn" type="button" class="btn btn-primary" type="submit">Save changes</button>
         </div>
       </div>
     </div>
   </div>
-
-
+  
     `
-    body.appendChild(container)
+    body.appendChild(container); 
+    const trigger = document.getElementById('change-location-trigger');
+    trigger.addEventListener('click', addModalEvent)
 }
+

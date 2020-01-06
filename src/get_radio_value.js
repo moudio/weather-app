@@ -1,11 +1,7 @@
-export default function getRadioValue() {
-  const radios= document.getElementsByName("unit");
-  for (var i = 0, length = radios.length; i < length; i++) {
-   if (radios[i].checked) {
-     return radios[i].value;
-   }
- }
-
-}
-
-
+import showWeatherDetails from './show_weather_details'
+export default function getRadioValue(e) {
+if(e.target.type === 'radio'){
+  const unit = e.target.value
+  const city = document.getElementById('w-location').textContent;
+  showWeatherDetails(city,unit)
+}}
