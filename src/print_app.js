@@ -1,9 +1,10 @@
-import addModalEvent from './add_modal_event'
-export default function printApp(){
-    const body = document.querySelector('body')
-    const container = document.createElement('div'); 
-    container.classList.add('container');
-    container.innerHTML = `
+import addModalEvent from './add_modal_event';
+
+export default function printApp() {
+  const body = document.querySelector('body');
+  const container = document.createElement('div');
+  container.classList.add('container');
+  container.innerHTML = `
     <div class="row">
     <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded app">
     
@@ -73,9 +74,8 @@ Change Location
     </div>
   </div>
   
-    `
-    body.appendChild(container); 
-    const trigger = document.getElementById('change-location-trigger');
-    trigger.addEventListener('click', addModalEvent)
+    `;
+  body.appendChild(container);
+  const trigger = document.getElementById('change-location-trigger');
+  trigger.addEventListener('click', addModalEvent);
 }
-

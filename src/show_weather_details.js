@@ -1,11 +1,12 @@
-import Weather from "./weather";
-import UI from "./ui";
-import showError from "./show_error";
-export default function printWeather(location = "Dakar", unit = "celcius") {
+import Weather from './weather';
+import UI from './ui';
+import showError from './show_error';
+
+export default function printWeather(location = 'Dakar', unit = 'celcius') {
   const ui = new UI();
   const weather = new Weather(location);
   let weatherData;
-  if (unit === "celcius") {
+  if (unit === 'celcius') {
     weatherData = weather.getWeatherCelcius();
   } else {
     weatherData = weather.getWeatherFahrenheit();
@@ -13,11 +14,10 @@ export default function printWeather(location = "Dakar", unit = "celcius") {
 
   weatherData
     .then(result => {
-      console.log(result)
       ui.paint(result, unit);
     })
     .catch(() => {
-      showError("Please enter a valid city");
+      showError('Please enter a valid city');
       printWeather();
     });
 }
