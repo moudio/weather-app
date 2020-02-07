@@ -1,5 +1,5 @@
 import './style.scss';
-import 'bootstrap';
+import 'bootstrap'; // eslint-disable-line
 import printApp from './print_app';
 import getRadioValue from './get_radio_value';
 import showWeatherDetails from './show_weather_details';
