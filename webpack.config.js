@@ -1,4 +1,6 @@
-const path = require('path'); // eslint-disable-line global-require
+/* eslint-disable */
+const path = require('path');
+/* eslint-enable */
 
 module.exports = {
   entry: './src/app.js',
