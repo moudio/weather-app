@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/MouhaDiouf/Weather_JS/issues"
   },
-  "homepage": "https://github.com/MouhaDiouf/Weather_JS#readme",
+  "homepage": "https://github.com/MouhaDiouf/Weather_JS/dist/index.html",
   "devDependencies": {
     "@types/node": "^13.7.0",
     "autoprefixer": "^9.7.3",
