@@ -5,6 +5,6 @@ import getRadioValue from './get_radio_value';
 import showWeatherDetails from './show_weather_details';
 
 printApp();
-showWeatherDetails();
+//showWeatherDetails();
 
 document.querySelector('.radios').addEventListener('click', getRadioValue);
