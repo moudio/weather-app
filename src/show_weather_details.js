@@ -6,6 +6,7 @@ export default function printWeather(location = 'Dakar', unit = 'celcius') {
   const ui = new UI();
   const weather = new Weather(location);
   let weatherData;
+  if(!location) location = 'Paris'
   if (unit === 'celcius') {
     weatherData = weather.getWeatherCelcius();
   } else {
